@@ -6,8 +6,8 @@ from instagrapi import Client
 client = Client()
 
 # Log in to your Instagram account
-username = "alternative_rickroll"
-password = "hridayeshprasad785001@gmail.com"
+username = "Your username"
+password = "your password"
 
 print("Logging in...")
 try:
@@ -18,7 +18,7 @@ except Exception as e:
     exit(1)
 
 # Path to the video file
-video_file =r"E:\1\2020.mp4"
+video_file =r"Your video path.mp4"
 
 # Ensure the video file exists
 if not os.path.exists(video_file):
@@ -31,7 +31,7 @@ if not os.path.exists(video_file):
 def upload_video():
     try:
         print(f"Uploading: {video_file}".encode('utf-8', 'replace').decode())
-        client.video_upload(video_file, "Day")
+        client.video_upload(video_file, "coustom caption")
         print(f"Uploaded: {video_file}".encode('utf-8', 'replace').decode())
     except Exception as e:
         print(f"Failed to upload video: {e}".encode('utf-8', 'replace').decode())
